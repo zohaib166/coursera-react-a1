@@ -24,7 +24,7 @@ import {
     }
   }
 
-  function RenderComments({comments}) {
+  function RenderComments( {comments} ) {
     if (comments == null) {
       return <div></div>
     }
@@ -53,13 +53,14 @@ import {
   }
 
   const DishDetail = (props) => {
-
-    return (
-      <div className="row">
-        <div className="col-12 col-md-5 m-1"> <RenderDish dish={props.dish} /> </div>
-        <RenderComments comments={props.comments} />
-      </div>
-    )
+    if(props.dish!=null) {
+      return (
+        <div className="row">
+          <div className="col-12 col-md-5 m-1"> <RenderDish dish={props.dish} /> </div>
+          <RenderComments comments={ props.dish.comments } />
+        </div>
+      )
+    }
   }
 
 export default DishDetail;

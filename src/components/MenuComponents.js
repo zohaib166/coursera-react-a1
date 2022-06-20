@@ -18,13 +18,14 @@ const Menu = (props) => {
     return (
       <div key={dish.id} className="col-12 col-md-5 m-1">
         <RenderMenuItem dish={dish} onClick={props.onClick} />
+        {/* <DishDetail comments={ props.dish.comments } /> */}
       </div>
     )
   })
 
   return (
     <div className="container">
-      <div className="row">{menu}</div>;
+      <div className="row">{menu}</div>
     </div>
   )
 }
