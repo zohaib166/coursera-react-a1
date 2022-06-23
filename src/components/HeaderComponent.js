@@ -9,17 +9,17 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 class Header extends Component {
-  constructor (props) {
-    super(props) ;
+  constructor(props) {
+    super(props);
     this.state = {
-      isNavOpen: false
+      isNavOpen: false,
     };
 
     this.toggleNav = this.toggleNav.bind(this);
   }
   toggleNav() {
     this.setState({
-        isNavOpen: !this.state.isNavOpen
+      isNavOpen: !this.state.isNavOpen,
     });
   }
   render() {
@@ -35,7 +35,7 @@ class Header extends Component {
                 width="41"
                 alt="Ristorante Con Fusion"
               />
-            </NavbarBrand>
+            </NavbarBrand> 
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <NavItem>
