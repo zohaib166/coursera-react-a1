@@ -3,8 +3,8 @@ import Main from "./components/MainComponent";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
-import { ConfigureStore } from './redux/configureStore';
-const store = ConfigureStore();
+import { ConfigStore } from './redux/configureStore';
+const store = ConfigStore();
 
 class App extends Component {
   

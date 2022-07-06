@@ -77,15 +77,15 @@ class CommentForm extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="yourname" md={12}>
+                <Label htmlFor="author" md={12}>
                   Your Name
                 </Label>
                 <Col md={12}>
                   <Control.text
-                    model=".yourname"
+                    model=".author"
                     className="form-control"
-                    id="yourname"
-                    name="yourname"
+                    id="author"
+                    name="author"
                     placeholder="Your Name"
                     validators={{
                       required,
@@ -95,7 +95,7 @@ class CommentForm extends Component {
                   />
                   <Errors
                     className="text-danger"
-                    model=".yourname"
+                    model=".author"
                     show="touched"
                     messages={{
                       required: "Required",
